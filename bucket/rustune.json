@@ -1,29 +1,29 @@
 {
-  "version": "0.3.6",
-  "description": "A terminal music player with online audio search, local playback, and Winamp skin support",
-  "homepage": "https://rustune.dzulfikar.com",
-  "license": "MIT",
-  "suggest": {
-    "yt-dlp": "yt-dlp",
-    "ffmpeg": "ffmpeg",
-    "vcredist": "extras/vcredist2022"
-  },
-  "notes": "Online search and streaming need yt-dlp and ffmpeg: scoop install yt-dlp ffmpeg",
-  "architecture": {
-    "64bit": {
-      "url": "https://github.com/dzulfikar08/rustune/releases/download/v0.3.6/rustune-x86_64-windows.exe#/rustune.exe",
-      "hash": "1d5f9e48fdf171d4dbafee2a5b80d7459ede415c69d9ecffdb1a889b78f855f2"
-    }
-  },
-  "bin": "rustune.exe",
-  "checkver": {
-    "github": "https://github.com/dzulfikar08/rustune"
-  },
-  "autoupdate": {
+    "version": "0.3.7",
+    "description": "A terminal music player with online audio search, local playback, and Winamp skin support",
+    "homepage": "https://rustune.dzulfikar.com",
+    "license": "MIT",
+    "suggest": {
+        "yt-dlp": "yt-dlp",
+        "ffmpeg": "ffmpeg",
+        "vcredist": "extras/vcredist2022"
+    },
+    "notes": "Online search and streaming need yt-dlp and ffmpeg: scoop install yt-dlp ffmpeg",
     "architecture": {
-      "64bit": {
-        "url": "https://github.com/dzulfikar08/rustune/releases/download/v$version/rustune-x86_64-windows.exe#/rustune.exe"
-      }
+        "64bit": {
+            "url": "https://github.com/dzulfikar08/rustune/releases/download/v0.3.7/rustune-x86_64-windows.exe#/rustune.exe",
+            "hash": "01a0565ba86f0838fb3b3cc3b35aa6e9a0d70ec287eeb400091e8bdef9ac3fd1"
+        }
+    },
+    "bin": "rustune.exe",
+    "checkver": {
+        "github": "https://github.com/dzulfikar08/rustune"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/dzulfikar08/rustune/releases/download/v$version/rustune-x86_64-windows.exe#/rustune.exe"
+            }
+        }
     }
-  }
 }
