@@ -1,0 +1,28 @@
+name: Install test
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  install:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Scoop
+        shell: pwsh
+        run: |
+          iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
+          Join-Path (Resolve-Path ~).Path "scoop\shims" >> $env:GITHUB_PATH
+      - name: Install rustune from this commit
+        shell: pwsh
+        run: |
+          scoop bucket add rustune "$env:GITHUB_WORKSPACE"
+          scoop install rustune/rustune
+          if ($LASTEXITCODE) { exit 1 }
+      - name: Verify version
+        shell: pwsh
+        run: |
+          $expected = (Get-Content bucket/rustune.json -Raw | ConvertFrom-Json).version
+          $out = (rustune --version | Out-String).Trim()
+          Write-Host "Got: $out"
+          if ($out -ne "rustune $expected") { Write-Error "expected 'rustune $expected'"; exit 1 }
