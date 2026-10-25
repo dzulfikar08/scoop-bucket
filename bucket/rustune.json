@@ -5,7 +5,8 @@
     "license": "MIT",
     "suggest": {
         "yt-dlp": "yt-dlp",
-        "ffmpeg": "ffmpeg"
+        "ffmpeg": "ffmpeg",
+        "vcredist": "extras/vcredist2022"
     },
     "notes": "Online search and streaming need yt-dlp and ffmpeg: scoop install yt-dlp ffmpeg",
     "architecture": {
