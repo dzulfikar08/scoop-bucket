@@ -1,5 +1,5 @@
 {
-    "version": "0.3.7",
+    "version": "0.3.8",
     "description": "A terminal music player with online audio search, local playback, and Winamp skin support",
     "homepage": "https://rustune.dzulfikar.com",
     "license": "MIT",
@@ -11,8 +11,8 @@
     "notes": "Online search and streaming need yt-dlp and ffmpeg: scoop install yt-dlp ffmpeg",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/dzulfikar08/rustune/releases/download/v0.3.7/rustune-x86_64-windows.exe#/rustune.exe",
-            "hash": "01a0565ba86f0838fb3b3cc3b35aa6e9a0d70ec287eeb400091e8bdef9ac3fd1"
+            "url": "https://github.com/dzulfikar08/rustune/releases/download/v0.3.8/rustune-x86_64-windows.exe#/rustune.exe",
+            "hash": "22da69fef2beede21824b34ce071cdbe3266299da3b107388eb05f88e36a6c73"
         }
     },
     "bin": "rustune.exe",
